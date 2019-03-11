@@ -17,7 +17,7 @@ Template Name: About
 				<h1 class="h1 h1--about">
 					<span class="about__headline about__headline--the-girl">The girl,</span>
 					<span class="about__headline about__headline--the-designer">designer</span>
-					<span class="about__headline about__headling--the-climber">and climber</span>
+					<span class="about__headline about__headline--the-climber">and climber</span>
 				</h1>
 
 			</div>

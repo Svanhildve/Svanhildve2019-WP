@@ -42,12 +42,31 @@
 }
 
 .about__headline {
+	visibility: hidden;
 	display: inline-block;
 	margin-left: 20px;
 
 	@media #{$breakpoint-ml} {
 		margin-left: 0;
 	}
+}
+
+.about__headline--the-girl.about__headline--appear {
+	visibility: visible;
+	transition: all 0.4s;
+	transition-delay: 0.8s;
+}
+
+.about__headline--the-designer.about__headline--appear {
+	visibility: visible;
+	transition: all 0.4s;
+	transition-delay: 1.2s; 
+}
+
+.about__headline--the-climber.about__headline--appear {
+	visibility: visible;
+	transition: all 0.4s;
+	transition-delay: 1.6s; 
 }
 
 .about__top {
