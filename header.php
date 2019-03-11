@@ -115,7 +115,13 @@
 				<span class="header__nav__item"><a href="projects.html" class="animsition-link" data-animsition-out-class="overlay-slide-out-right">Projects</a></span>-->
 
 
-				<?php wp_nav_menu(); ?>
+				<!--<?php wp_nav_menu(); ?>-->
+
+				<?php
+					wp_nav_menu( array(
+						'walker' => new animstion_primary_nav()
+					 ) );
+				?>
 
 
 			</nav>

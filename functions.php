@@ -69,4 +69,32 @@ function my_mce_before_init_insert_formats( $init_array ) {
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
 
+class animstion_primary_nav extends Walker_Nav_Menu {
+
+	function start_el(&$output, $item, $depth=0, $args=array(), $id = 0) {
+	
+		$object = $item->object;
+    	$type = $item->type;
+    	$title = $item->title;
+    	$description = $item->description;
+    	$permalink = $item->url;
+
+    	$output .= "<li class='" .  implode(" ", $item->classes) . "'>";
+
+     
+      	$output .= '<a href="' . $permalink . '" class="animsition-link" data-animsition-out-class="overlay-slide-out-right">';
+
+       
+      	$output .= $title;
+
+   
+      	$output .= '</a>';
+
+
+
+
+	}
+
+}
+
 ?>
