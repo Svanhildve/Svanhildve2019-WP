@@ -1,0 +1,31 @@
+@media #{$breakpoint-md} {
+
+	.overlapping {
+		margin-bottom: -100px;
+	}
+
+}
+
+.alternating-image {
+	width:  585px;
+	height: 780px;
+	background-size: cover;
+
+
+	img {
+		width: 100%;
+	}
+
+}
+
+@media #{$breakpoint-md} {
+	.alternating-text {
+		margin-top: 60px;
+	}
+}
+
+@media #{$breakpoint-lg} {
+	.alternating-text {
+		margin-top: 200px;
+	}
+}

@@ -1,0 +1,58 @@
+$primary-typeface: 		"Acumin Pro Wide";
+
+
+
+body {
+	font-family: 'Acumin Pro Wide', sans-serif;
+	font-size: 16px;
+	color: #333333;
+}
+
+p {
+	line-height: 26px;
+	margin-top: 0;
+	margin-bottom: 16px;
+	line-height: 32px;
+}
+
+strong {
+	font-family: 'Acumin Pro Wide';
+	font-weight: normal;
+}
+
+
+h1 {
+	font-family: 'Eczar semibold', serif;
+	font-weight: normal;
+}
+
+h2, h3, h4, h5, h6 {
+	font-family: 'Acumin Pro Wide', sans-serif;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 18px;
+	margin-bottom: 12px;
+	@media #{$breakpoint-ml} {
+		font-size: 22px;
+	}
+}
+
+
+.h2--project-card {
+	font-family: 'Eczar semibold', serif;
+	font-weight: normal;
+	font-size: 36px;
+	line-height: 46px;
+
+	@media #{$breakpoint-ml} {
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	@media #{$breakpoint-lg} {
+		font-size: 60px;
+		line-height: 80px;
+	}
+}
