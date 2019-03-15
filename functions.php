@@ -14,14 +14,14 @@ register_sidebar(array( 'before_title' => '<h3>', 'after_title' => '</h3>' ));
 
 
 
-function custom_post_portfolio() {
+function custom_post_projects() {
     $args = array(
     	'public' 		=> true,
     	'label'  		=> 'Portfolio Items',
     	'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
 		'has_archive'	=> false,
 		'rewrite'		=> array( 
-			'slug' 			=> 'portfolio',
+			'slug' 			=> 'projects',
 			'with_front' 	=> '1',
 			'capability_type'     => 'page'
 		),
@@ -29,7 +29,7 @@ function custom_post_portfolio() {
     register_post_type( 'portfolio_items', $args );
 }
 
-add_action( 'init', 'custom_post_portfolio' );
+add_action( 'init', 'custom_post_projects' );
 
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
@@ -91,10 +91,16 @@ class animstion_primary_nav extends Walker_Nav_Menu {
       	$output .= '</a>';
 
 
-
-
 	}
 
 }
+
+
+
+//if ( is_page_template( 'about.php' ) ) {
+    // about.php is used
+//}
+
+
 
 ?>

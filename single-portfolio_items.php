@@ -11,7 +11,7 @@
 					<section class="case__top">
 				
 						<div class="case__headline col-s-12">
-							<span class="case__meta"><?php the_field('what'); ?></span>
+							<span class="case__meta"><?php the_field('what'); ?>—</span>
 							<h1 class="h1--project"><?php single_post_title(); ?></h1>
 						</div>
 						
@@ -42,7 +42,7 @@
 
 					<div class="col-s-12 next-project">
 
-			 			 <a class="next-project__link" href="<?php echo $prev_post->guid ?>">
+			 			 <a class="next-project__link animsition-link" data-animsition-out-class="overlay-slide-out-bottom"href="<?php echo $prev_post->guid ?>">
 			 			 	<div class="next-project__wrap">
 								<h2>
 									<span class="case__meta">Next project—</span>

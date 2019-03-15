@@ -34,7 +34,7 @@ Template Name: Portfolio Listing
 							<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
 
 
-								<div class="subtitle"><?php the_field('what'); ?></div>
+								<div class="subtitle"><?php the_field('what'); ?>—</div>
 		      					<h2><?php the_title(); ?></h2>  
 
 		      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
@@ -61,8 +61,8 @@ Template Name: Portfolio Listing
 
 			</div>
 
-</section>
-<!--	
+
+
 
 
 		<div class="portfolio-cards row">
@@ -105,9 +105,7 @@ Template Name: Portfolio Listing
 
 				</a>
 
-			</div>
-
-			
+			</div>			
 
 		</div>
 
@@ -153,7 +151,7 @@ Template Name: Portfolio Listing
 
 		</div>
 
--->
+</section>
 
 <script>
   $(document).ready(function() {
