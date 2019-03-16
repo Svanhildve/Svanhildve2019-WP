@@ -779,12 +779,16 @@ body {
   z-index: -1000;
   position: relative;
   overflow: hidden;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
-  padding-bottom: 120%;
   margin-bottom: 50px; }
   @media only screen and (min-width: 1024px) {
     .case__hero-wrap {
       margin-bottom: 80px; } }
+
+.case__hero-wrap--landscape {
+  padding-bottom: 65%; }
+
+.case__hero-wrap--portrait {
+  padding-bottom: 120%; }
 
 .case__hero-img {
   width: 100%;
@@ -795,7 +799,6 @@ body {
   background-position: 50% 50%;
   position: absolute;
   backface-visibility: hidden;
-  transition: transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1), -webkit-transform 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-image: url("images/lavida.jpg"); }
 
 .case__headline {

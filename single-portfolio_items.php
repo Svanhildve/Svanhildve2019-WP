@@ -9,17 +9,44 @@
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<section class="case__top">
+
+						<?php
+
+						$landscape = get_field('hero_format') == "landscape";
+						$portrait = get_field('hero_format') == "portrait";
+
+						if ( $landscape ) { ?>
+
 				
-						<div class="case__headline col-s-12">
-							<span class="case__meta"><?php the_field('what'); ?>—</span>
-							<h1 class="h1--project"><?php single_post_title(); ?></h1>
-						</div>
-						
-						<div class="col-s-12 col-pm-offset-3 col-pm-6 col-m-offset-2 col-m-8 col-ml-offset-3 col-ml-6">
-							<div class="case__hero-wrap">
-								<div class="case__hero-img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
+							<div class="case__headline col-s-12">
+								<span class="case__meta"><?php the_field('what'); ?>—</span>
+								<h1 class="h1--project"><?php single_post_title(); ?></h1>
 							</div>
-						</div>
+							
+							<div class="col-s-12 col-pm-offset-1 col-pm-10 col-m-offset-1 col-m-10 col-ml-offset-1 col-ml-10">
+								<div class="case__hero-wrap case__hero-wrap--landscape">
+									<div class="case__hero-img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
+								</div>
+							</div>
+
+						<?php
+						}
+
+						if ( $portrait ) { ?>
+
+							<div class="case__headline col-s-12">
+								<span class="case__meta"><?php the_field('what'); ?>—</span>
+								<h1 class="h1--project"><?php single_post_title(); ?></h1>
+							</div>
+							
+							<div class="col-s-12 col-pm-offset-3 col-pm-6 col-m-offset-2 col-m-8 col-ml-offset-3 col-ml-6">
+								<div class="case__hero-wrap case__hero-wrap--portrait">
+									<div class="case__hero-img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
+								</div>
+							</div>
+
+						<?php
+						} ?>
 
 					</section>
 

@@ -38,13 +38,19 @@
     z-index: -1000;
     position: relative;
 	overflow: hidden;
-	transition: transform .3s cubic-bezier(.645,.045,.355,1),-webkit-transform .3s cubic-bezier(.645,.045,.355,1);
-	padding-bottom: 120%;
 	margin-bottom: 50px;
 
 	@media #{$breakpoint-ml} {
 		margin-bottom: 80px;
 	}
+}
+
+.case__hero-wrap--landscape {
+	padding-bottom: 65%;
+}
+
+.case__hero-wrap--portrait {
+	padding-bottom: 120%;
 }
 
 
@@ -57,7 +63,7 @@
     background-position: 50% 50%;
     position: absolute;
     backface-visibility: hidden;
-    transition: transform .3s cubic-bezier(.645,.045,.355,1),-webkit-transform .3s cubic-bezier(.645,.045,.355,1);
+    
     background-image: url('images/lavida.jpg');
 }
 
