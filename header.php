@@ -47,23 +47,6 @@
 
 	<script type="text/javascript">
 
-//	const aboutTagOne = document.querySelector(".about__headline--the-girl");
-
-//	const loadHeadline = function() {
-//		aboutTagOne.style.visibility = 'hidden';
-//	}
-
-//	document.addEventListener("load", function() {
-//	  loadHeadline();
-//	})
-
-
-//	This works
-
-//	window.addEventListener("load", function() {
-//	  document.querySelector(".about__headline--the-girl").style.visibility = 'hidden';
-//	})
-
 	window.onload = function() {
 	  document.querySelector(".about__headline--the-girl").classList.add('about__headline--appear');
 	  document.querySelector(".about__headline--the-designer").classList.add('about__headline--appear');
@@ -72,14 +55,16 @@
 
 
 	</script>
-	
+
+
+
+		
+		
+
 
 <?php wp_head(); ?>
 
 </head>
-
-
-
 
 
 <body <?php body_class(); ?>>
@@ -122,6 +107,7 @@
 						'walker' => new animstion_primary_nav()
 					 ) );
 				?>
+
 
 
 			</nav>

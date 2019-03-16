@@ -12,24 +12,42 @@ if ( function_exists( 'add_theme_support' ) ) {
 
 register_sidebar(array( 'before_title' => '<h3>', 'after_title' => '</h3>' ));
 
-
-
-function custom_post_projects() {
-    $args = array(
-    	'public' 		=> true,
-    	'label'  		=> 'Portfolio Items',
-    	'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
-		'has_archive'	=> false,
-		'rewrite'		=> array( 
-			'slug' 			=> 'projects',
-			'with_front' 	=> '1',
-			'capability_type'     => 'page'
-		),
-    );
-    register_post_type( 'portfolio_items', $args );
+function create_post_type() {
+  register_post_type( 'portfolio_items',
+    array(
+      'labels' => array(
+        'name' => __( 'Cases' ),
+        'singular_name' => __( 'Case' )
+      ),
+      'public' => true,
+      'has_archive' => false,
+      'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
+      'rewrite'		=> array( 
+ 			'slug' 			=> 'projects',
+ 			'with_front' 	=> '1',
+ 			'capability_type'     => 'page'
+ 		),
+    )
+  );
 }
+add_action( 'init', 'create_post_type' );
 
-add_action( 'init', 'custom_post_projects' );
+// function custom_post_projects() {
+//     $args = array(
+//     	'public' 		=> true,
+//     	'label'  		=> 'Portfolio Items',
+//     	'supports'		=> array('title', 'editor', 'thumbnail', 'excerpt', 'page-attributes'),
+// 		'has_archive'	=> false,
+// 		'rewrite'		=> array( 
+// 			'slug' 			=> 'projects',
+// 			'with_front' 	=> '1',
+// 			'capability_type'     => 'page'
+// 		),
+//     );
+//     register_post_type( 'portfolio_items', $args );
+// }
+
+// add_action( 'init', 'custom_post_projects' );
 
 add_filter( 'body_class', 'custom_class' );
 function custom_class( $classes ) {
@@ -94,13 +112,6 @@ class animstion_primary_nav extends Walker_Nav_Menu {
 	}
 
 }
-
-
-
-//if ( is_page_template( 'about.php' ) ) {
-    // about.php is used
-//}
-
 
 
 ?>
