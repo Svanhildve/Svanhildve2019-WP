@@ -74,6 +74,24 @@ if( have_rows('flexible_content') ):
 			} ; // End if $image
 
 
+		elseif( get_row_layout() == 'video_block' ): 
+
+			$video = get_sub_field( 'video' ); 
+
+
+			if ( $video ) { ?>
+
+				<div class="row case__video">
+					<div class="col-s-12">
+						<video class="case__video-file" autoplay loop>
+						  <source src="<?php echo esc_url($video);?>" type="video/mp4">
+						</video>
+					</div>
+				</div>
+
+			<?php
+			} ; // End if $image
+
 
 		elseif( get_row_layout() == 'image_+_text' ): 
 

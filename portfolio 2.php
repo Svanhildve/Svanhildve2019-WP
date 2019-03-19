@@ -25,125 +25,33 @@ Template Name: Portfolio Listing
 
 				<?php if ( $query->have_posts() ) : while ( $query->have_posts() ) : $query->the_post(); ?>
 
-					<?php
-
-					$count == 0;
-
-					if ( $count == 0 ) { ?>
-
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
-
-							<div class="row clear-full-width wrapper">
-
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
-
-									1
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
-
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
-
-			      				</div>
-
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
-
-						<?php $count++;
-					}
-					elseif ( $count == 1 ) { ?>
-						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
-
-							<div class="row clear-full-width wrapper">
-
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
-
-									2
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
-
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
-
-			      				</div>
-
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
-
-						<?php $count++;
-					}
-					elseif ( $count == 2 ) { ?>
-						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
-
-							<div class="row clear-full-width wrapper">
-
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
-
-									3
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
-
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
-
-			      				</div>
-
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
-
-						<?php $count++;
-					}
-					elseif ( $count == 3 ) { ?>
-						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
-
-							<div class="row clear-full-width wrapper">
-
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
-
-									4
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
-
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
-
-			      				</div>
-
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
-
-						<?php $count++;
-					}
-					
 
 
-					?>
+					<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
 
-					
+						<div class="row clear-full-width wrapper">
+
+							<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
+
+
+								<div class="subtitle"><?php the_field('what'); ?>—</div>
+		      					<h2><?php the_title(); ?></h2>  
+
+		      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
+
+		      				</div>
+
+		      				<div class="col-m-5 col-l-6"></div> 
+
+	      					
+
+      					</div>	
+
+      				</div>
 
 				
 
 				<?php endwhile; else: ?>
-
 
 				<p><?php _e('Sorry, no content! :( '); ?></p>
 
