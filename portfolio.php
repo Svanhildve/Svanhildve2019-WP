@@ -131,7 +131,7 @@ Template Name: Portfolio Listing
 
       					</div>
 
-						<?php $count++;
+						<?php $count = 0;
 					}
 					
 
