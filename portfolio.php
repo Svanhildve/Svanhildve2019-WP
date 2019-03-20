@@ -31,108 +31,121 @@ Template Name: Portfolio Listing
 
 					if ( $count == 0 ) { ?>
 
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+						<div class="portfolio-cards row">
 
-							<div class="row clear-full-width wrapper">
+							<div class="portfolio-card__item portfolio-card__item--1 col-s-10 col-m-5 col-l-4">
 
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
 
-									1
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
+								<a href="<?php the_permalink(); ?>" class="animsition-link" data-animsition-out-class="overlay-slide-out-bottom">
+										
+									<div class="portfolio-card__img-wrap">
+										<div class="portfolio-card__img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
 
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
+									</div>
+									
 
-			      				</div>
+									<div class="portfolio-card__content">					
+										<div class="portfolio-card__title"><h2 class="h2 h2--project-card"><?php the_title(); ?></h2></div>
+										<div class="portfolio-card__meta"><?php the_field('what'); ?>—</div>
+									</div>
 
-			      				<div class="col-m-5 col-l-6"></div> 
+								</a>
 
-		      					
-
-	      					</div>	
-
-      					</div>
+							</div>
 
 						<?php $count++;
+
+						if (($query->current_post +1) == ($query->post_count)) { ?>
+							</div><?php	
+						}
+
 					}
 					elseif ( $count == 1 ) { ?>
 						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+							<div class="portfolio-card__item portfolio-card__item--2 col-s-offset-2 col-s-10 col-m-offset-2 col-m-5 col-l-offset-4 col-l-4">
 
-							<div class="row clear-full-width wrapper">
 
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
+								<a href="<?php the_permalink(); ?>" class="animsition-link" data-animsition-out-class="overlay-slide-out-bottom">
+										
+									<div class="portfolio-card__img-wrap">
+										<div class="portfolio-card__img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
 
-									2
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
+									</div>
+									
 
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
+									<div class="portfolio-card__content">					
+										<div class="portfolio-card__title"><h2 class="h2 h2--project-card"><?php the_title(); ?></h2></div>
+										<div class="portfolio-card__meta"><?php the_field('what'); ?>—</div>
+									</div>
 
-			      				</div>
+								</a>
 
-			      				<div class="col-m-5 col-l-6"></div> 
+							</div>			
 
-		      					
-
-	      					</div>	
-
-      					</div>
+						</div>
 
 						<?php $count++;
+
+
 					}
+
+
+
 					elseif ( $count == 2 ) { ?>
 						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+						<div class="portfolio-cards row">
 
-							<div class="row clear-full-width wrapper">
+							<div class="portfolio-card__item portfolio-card__item--3 col-s-10 col-l-offset-1 col-m-5 col-l-4">
 
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
+								<a href="<?php the_permalink(); ?>" class="animsition-link" data-animsition-out-class="overlay-slide-out-bottom">
+										
+									<div class="portfolio-card__img-wrap">
+										<div class="portfolio-card__img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
 
-									3
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
+									</div>
+									
 
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
+									<div class="portfolio-card__content">					
+										<div class="portfolio-card__title"><h2 class="h2 h2--project-card"><?php the_title(); ?></h2></div>
+										<div class="portfolio-card__meta"><?php the_field('what'); ?>—</div>
+									</div>
 
-			      				</div>
+								</a>
 
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
+							</div>
 
 						<?php $count++;
+
+						if (($query->current_post +1) == ($query->post_count)) { ?>
+							</div><?php	
+						}
+
 					}
 					elseif ( $count == 3 ) { ?>
 						
-						<div class="col-s-12 col-m-12 col-l-12 portfolio-listing-item full-width" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')">
+							<div class="portfolio-card__item portfolio-card__item--4 col-s-offset-2 col-s-10 col-m-offset-2 col-ml-offset-2 col-m-5 col-l-4">
 
-							<div class="row clear-full-width wrapper">
+								<a href="<?php the_permalink(); ?>" class="animsition-link" data-animsition-out-class="overlay-slide-out-bottom">
+										
+									<div class="portfolio-card__img-wrap">
+										<div class="portfolio-card__img" style="background-image:url('<?php echo wp_get_attachment_url( get_post_thumbnail_id() );?>')"></div>
 
-								<div class="col-s-12 col-m-7 col-l-6 portfolio-listing-text">
+									</div>
+									
 
-									4
-									<div class="subtitle"><?php the_field('what'); ?>—</div>
-			      					<h2><?php the_title(); ?></h2>  
+									<div class="portfolio-card__content">					
+										<div class="portfolio-card__title"><h2 class="h2 h2--project-card"><?php the_title(); ?></h2></div>
+										<div class="portfolio-card__meta"><?php the_field('what'); ?>—</div>
+									</div>
 
-			      					<a class="secondary-button" href="<?php the_permalink(); ?>">View Case Study</a> 
+								</a>
 
-			      				</div>
+							</div>
 
-			      				<div class="col-m-5 col-l-6"></div> 
-
-		      					
-
-	      					</div>	
-
-      					</div>
+						</div>
 
 						<?php $count = 0;
-					}
+					} 
 					
 
 
@@ -157,7 +170,7 @@ Template Name: Portfolio Listing
 
 
 
-		<div class="portfolio-cards row">
+		<!-- <div class="portfolio-cards row">
 
 			<div class="portfolio-card__item portfolio-card__item--1 col-s-10 col-m-5 col-l-4">
 
@@ -241,7 +254,7 @@ Template Name: Portfolio Listing
 
 			</div>
 
-		</div>
+		</div> -->
 
 </section>
 

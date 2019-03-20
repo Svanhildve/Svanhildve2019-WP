@@ -692,8 +692,6 @@ body {
       .portfolio-card__item--1 .portfolio-card__content {
         left: 40px;
         min-width: 500px; } }
-  .portfolio-card__item--1 .portfolio-card__img {
-    background-image: url("images/lavida.jpg"); }
   .portfolio-card__item--1 .portfolio-card__img-wrap {
     padding-bottom: 110%; }
 
@@ -841,6 +839,12 @@ body {
   margin-top: 30px; }
   @media only screen and (min-width: 1024px) {
     .case__wide-image + .case__text {
+      margin-top: 50px; } }
+
+.case__video + .case__text {
+  margin-top: 30px; }
+  @media only screen and (min-width: 1024px) {
+    .case__video + .case__text {
       margin-top: 50px; } }
 
 .case__wide-image-img {
