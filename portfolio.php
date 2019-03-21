@@ -16,7 +16,7 @@ Template Name: Portfolio Listing
 
 					'post_type' => 'portfolio_items',
 					'orderby' => 'menu_order',
-					'order' => 'ASC',
+					'order' => 'DESC',
 					'posts_per_page' => 20,
 					
 				);
